@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
   <PropertyGroup>
     <ProjectGuid>{80F76D10-0B44-4D55-B4BD-DAEB5464090C}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -7,7 +7,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>MSHelpSystem</RootNamespace>
     <AssemblyName>HelpViewer</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
     <NoStdLib>False</NoStdLib>
     <WarningLevel>4</WarningLevel>
@@ -67,7 +67,9 @@
     </Compile>
     <Compile Include="Configuration\AssemblyInfo.cs" />
     <Compile Include="Source\BrowserScheme.cs" />
-    <Compile Include="Source\Controls\HelpLibraryManagerNotFound.cs" />
+    <Compile Include="Source\Controls\HelpLibraryManagerNotFound.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Source\Controls\Pads.cs" />
     <Compile Include="Source\Controls\SearchPadControl.xaml.cs">
       <DependentUpon>SearchPadControl.xaml</DependentUpon>
@@ -95,12 +97,7 @@
     <Compile Include="Source\MSHelp3Provider.cs" />
     <Compile Include="Source\Core\NativeMethods.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Source" />
-    <Folder Include="Source\Core" />
-    <Folder Include="Source\Helper" />
-    <Folder Include="Source\Controls" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Page Include="Source\Controls\SearchPadControl.xaml" />
     <Page Include="Source\Controls\TocPadControl.xaml" />

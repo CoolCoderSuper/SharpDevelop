@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
   <PropertyGroup>
     <ProjectGuid>{D781721F-C2A7-4E95-B76F-247170AC3B13}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -7,7 +7,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>ICSharpCode.AspNet.Mvc</RootNamespace>
     <AssemblyName>AspNet.Mvc</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <OutputPath>..\..\..\..\..\AddIns\BackendBindings\AspNet.Mvc\</OutputPath>
     <TargetFrameworkProfile />
@@ -73,37 +73,47 @@
     <Compile Include="ItemTemplates\CSharp\CodeTemplates\AddView\AspxCSharp\Create.cs">
       <DependentUpon>Create.tt</DependentUpon>
       <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="ItemTemplates\CSharp\CodeTemplates\AddView\AspxCSharp\Delete.cs">
       <DependentUpon>Delete.tt</DependentUpon>
       <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="ItemTemplates\CSharp\CodeTemplates\AddView\AspxCSharp\Details.cs">
       <DependentUpon>Details.tt</DependentUpon>
       <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="ItemTemplates\CSharp\CodeTemplates\AddView\AspxCSharp\Edit.cs">
       <DependentUpon>Edit.tt</DependentUpon>
       <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="ItemTemplates\CSharp\CodeTemplates\AddView\AspxCSharp\Empty.cs">
       <DependentUpon>Empty.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="ItemTemplates\CSharp\CodeTemplates\AddView\AspxCSharp\List.cs">
       <DependentUpon>List.tt</DependentUpon>
       <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="ItemTemplates\CSharp\CodeTemplates\AddView\CSHTML\Create.cs">
       <DependentUpon>Create.tt</DependentUpon>
       <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="ItemTemplates\CSharp\CodeTemplates\AddView\CSHTML\Delete.cs">
       <DependentUpon>Delete.tt</DependentUpon>
       <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="ItemTemplates\CSharp\CodeTemplates\AddView\CSHTML\Details.cs">
       <DependentUpon>Details.tt</DependentUpon>
       <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="ItemTemplates\CSharp\CodeTemplates\AddView\CSHTML\Details.txt">
       <DependentUpon>Details.tt</DependentUpon>
@@ -112,13 +122,17 @@
     <Compile Include="ItemTemplates\CSharp\CodeTemplates\AddView\CSHTML\Edit.cs">
       <DependentUpon>Edit.tt</DependentUpon>
       <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="ItemTemplates\CSharp\CodeTemplates\AddView\CSHTML\Empty.cs">
       <DependentUpon>Empty.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="ItemTemplates\CSharp\CodeTemplates\AddView\CSHTML\List.cs">
       <DependentUpon>List.tt</DependentUpon>
       <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Src\AddMvcControllerToProjectCommand.cs" />
     <Compile Include="Src\AddMvcControllerToProjectView.xaml.cs">
@@ -239,7 +253,9 @@
     <Compile Include="Src\MvcViewTypeViewModel.cs" />
     <Compile Include="Src\MvcVirtualPath.cs" />
     <Compile Include="Src\NullIISAdministrator.cs" />
-    <Compile Include="Src\ProcessMonitor.cs" />
+    <Compile Include="Src\ProcessMonitor.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Src\SelectedFolderNodeInProjectsView.cs" />
     <Compile Include="Src\SelectedMvcControllerFolder.cs" />
     <Compile Include="Src\SelectedMvcFolder.cs" />
@@ -256,23 +272,7 @@
     <Compile Include="Src\WebProjectService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ItemTemplates" />
-    <Folder Include="ItemTemplates\CSharp\CodeTemplates" />
-    <Folder Include="ItemTemplates\CSharp" />
-    <Folder Include="ItemTemplates\CSharp\CodeTemplates\AddView" />
-    <Folder Include="ItemTemplates\CSharp\CodeTemplates\AddView\AspxCSharp" />
-    <Folder Include="ItemTemplates\CSharp\CodeTemplates\AddController" />
-    <Folder Include="ItemTemplates\CSharp\CodeTemplates\AddView\CSHTML" />
-    <Folder Include="ItemTemplates\VisualBasic" />
-    <Folder Include="ItemTemplates\VisualBasic\CodeTemplates" />
-    <Folder Include="ItemTemplates\VisualBasic\CodeTemplates\AddView" />
-    <Folder Include="ItemTemplates\VisualBasic\CodeTemplates\AddView\AspxVisualBasic" />
-    <Folder Include="ItemTemplates\VisualBasic\CodeTemplates\AddController" />
-    <Folder Include="ItemTemplates\VisualBasic\CodeTemplates\AddView\VBHTML" />
-    <Folder Include="Resources" />
-    <Folder Include="Src\Folding" />
-    <Folder Include="Src\Completion" />
-    <Folder Include="Src\WebProjectOptions" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\Libraries\AvalonEdit\ICSharpCode.AvalonEdit\ICSharpCode.AvalonEdit.csproj">

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -11,7 +11,7 @@
     <OutputTarget>Library</OutputTarget>
     <WarningLevel>4</WarningLevel>
     <NoStdLib>False</NoStdLib>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <NoConfig>False</NoConfig>
     <RunPostBuildEvent>OnSuccessfulBuild</RunPostBuildEvent>
     <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
@@ -90,16 +90,24 @@
     <Compile Include="Src\WixFileName.cs" />
     <Compile Include="Src\WixProjectBinding.cs" />
     <Compile Include="Src\Project\WixProject.cs" />
-    <Compile Include="Src\Gui\CompilerParametersPanel.cs" />
+    <Compile Include="Src\Gui\CompilerParametersPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Configuration\AssemblyInfo.cs" />
     <Compile Include="..\..\..\..\Main\GlobalAssemblyInfo.cs">
       <Link>Configuration\GlobalAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="Src\Gui\ApplicationSettingsPanel.cs" />
+    <Compile Include="Src\Gui\ApplicationSettingsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <EmbeddedResource Include="Resources\ApplicationSettingsPanel.xfrm" />
     <EmbeddedResource Include="Resources\CompilerParametersPanel.xfrm" />
-    <Compile Include="Src\Gui\PreprocessorVariablesPanel.cs" />
-    <Compile Include="Src\Gui\NameValueListEditor.cs" />
+    <Compile Include="Src\Gui\PreprocessorVariablesPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Src\Gui\NameValueListEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Src\Gui\SemicolonSeparatedNameValueListBinding.cs" />
     <Compile Include="Src\Project\WixLibraryProjectItem.cs" />
     <Compile Include="Src\Project\WixProjectNodeBuilder.cs" />
@@ -152,7 +160,9 @@
     <Compile Include="Src\Commands\ViewSetupFilesCommand.cs" />
     <Compile Include="Src\Commands\ViewSetupDialogsCommand.cs" />
     <Compile Include="Src\Gui\PackageFilesView.cs" />
-    <Compile Include="Src\Gui\WixPackageFilesControl.cs" />
+    <Compile Include="Src\Gui\WixPackageFilesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Src\Gui\WorkbenchTextFileReader.cs" />
     <Compile Include="Src\WixDirectoryElement.cs" />
     <Compile Include="Src\Gui\WixDirectoryTreeNode.cs" />
@@ -164,8 +174,12 @@
     <Compile Include="Src\Gui\WixComponentTreeNode.cs" />
     <Compile Include="Src\Gui\WixFileTreeNode.cs" />
     <Compile Include="Src\Gui\AddChildElementsMenuBuilder.cs" />
-    <Compile Include="Src\Gui\WixPackageFilesTreeView.cs" />
-    <Compile Include="Src\Commands\AddElementCommand.cs" />
+    <Compile Include="Src\Gui\WixPackageFilesTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Src\Commands\AddElementCommand.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Src\Commands\RemoveElementCommand.cs" />
     <Compile Include="Src\WixComponentElement.cs" />
     <Compile Include="Src\WixDirectoryRefElement.cs" />
@@ -177,14 +191,18 @@
     <Compile Include="Src\IDirectoryReader.cs" />
     <Compile Include="Src\Commands\AddDirectoryCommand.cs" />
     <Compile Include="Src\PropertyGrid\GuidEditor.cs" />
-    <Compile Include="Src\PropertyGrid\GuidEditorListBox.cs" />
+    <Compile Include="Src\PropertyGrid\GuidEditorListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Src\PropertyGrid\RelativeFileNameEditor.cs" />
     <Compile Include="Src\PropertyGrid\WixDropDownEditor.cs" />
     <Compile Include="Src\WixPackageFilesDiff.cs" />
     <Compile Include="Src\WixPackageFilesDiffResult.cs" />
     <Compile Include="Src\DirectoryReader.cs" />
     <Compile Include="Src\Commands\ShowDiffCommand.cs" />
-    <Compile Include="Src\Gui\WixPackageFilesDiffControl.cs" />
+    <Compile Include="Src\Gui\WixPackageFilesDiffControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Src\Commands\HideDiffCommand.cs" />
     <Compile Include="Src\ExcludedNames.cs" />
     <Content Include="Templates\DefaultLicense.rtf">

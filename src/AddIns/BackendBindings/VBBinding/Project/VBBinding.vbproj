@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -11,7 +11,7 @@
     <WarningLevel>4</WarningLevel>
     <NoStdLib>False</NoStdLib>
     <NoConfig>False</NoConfig>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <RunPostBuildEvent>OnSuccessfulBuild</RunPostBuildEvent>
     <OutputType>Library</OutputType>
     <AssemblyOriginatorKeyMode>File</AssemblyOriginatorKeyMode>
@@ -116,7 +116,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="OptionPanels" />
+    <Folder Include="My Project\" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="OptionPanels\BuildOptions.xaml" />

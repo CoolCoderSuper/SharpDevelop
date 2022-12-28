@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -23,7 +23,7 @@
     <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
     <DelaySign>False</DelaySign>
     <AssemblyOriginatorKeyMode>File</AssemblyOriginatorKeyMode>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -149,15 +149,21 @@
     <Compile Include="Project\Build\MSBuildEngine\TargetingPackWarningWorkaround.cs" />
     <Compile Include="Project\Build\MSBuildEngine\WorkerProcess.cs" />
     <Compile Include="Project\Build\UIBuildFeedbackSink.cs" />
-    <Compile Include="Project\Configuration\AddNewConfigurationDialog.cs" />
+    <Compile Include="Project\Configuration\AddNewConfigurationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Project\Configuration\AddNewConfigurationDialog.Designer.cs">
       <DependentUpon>AddNewConfigurationDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="Project\Configuration\EditAvailableConfigurationsDialog.cs" />
+    <Compile Include="Project\Configuration\EditAvailableConfigurationsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Project\Configuration\EditAvailableConfigurationsDialog.Designer.cs">
       <DependentUpon>EditAvailableConfigurationsDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="Project\Configuration\SolutionConfigurationEditor.cs" />
+    <Compile Include="Project\Configuration\SolutionConfigurationEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Project\Configuration\SolutionConfigurationEditor.Designer.cs">
       <DependentUpon>SolutionConfigurationEditor.cs</DependentUpon>
     </Compile>
@@ -175,7 +181,9 @@
     <Compile Include="Services\UIService.cs" />
     <Compile Include="Startup\App.xaml.cs" />
     <Compile Include="Startup\SharpDevelopMain.cs" />
-    <Compile Include="Startup\SplashScreen.cs" />
+    <Compile Include="Startup\SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Templates\CustomizationObject\LocalizedProperty.cs" />
     <Compile Include="Templates\CustomizationObject\LocalizedTypeDescriptor.cs" />
     <Compile Include="Templates\CustomizationObject\TemplateTypeConverter.cs" />
@@ -196,14 +204,18 @@
     <Compile Include="Workbench\AvalonPadContent.cs" />
     <Compile Include="Workbench\AvalonWorkbenchWindow.cs" />
     <Compile Include="Workbench\ChooseLayoutComboBox.cs" />
-    <Compile Include="Workbench\DisplayBinding\AddOpenWithEntryDialog.cs" />
+    <Compile Include="Workbench\DisplayBinding\AddOpenWithEntryDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Workbench\DisplayBinding\AddOpenWithEntryDialog.Designer.cs">
       <DependentUpon>AddOpenWithEntryDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Workbench\DisplayBinding\AutoDetectDisplayBinding.cs" />
     <Compile Include="Workbench\DisplayBinding\DisplayBindingDoozer.cs" />
     <Compile Include="Workbench\DisplayBinding\DisplayBindingService.cs" />
-    <Compile Include="Workbench\DisplayBinding\OpenWithDialog.cs" />
+    <Compile Include="Workbench\DisplayBinding\OpenWithDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Workbench\DisplayBinding\OpenWithDialog.Designer.cs">
       <DependentUpon>OpenWithDialog.cs</DependentUpon>
     </Compile>
@@ -221,7 +233,9 @@
     <Compile Include="Workbench\StatusBarService.cs" />
     <Compile Include="Workbench\WorkbenchStartup.cs" />
     <Compile Include="Workbench\WpfWorkbench.cs" />
-    <Compile Include="Logging\ExceptionBox.cs" />
+    <Compile Include="Logging\ExceptionBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Logging\log4netLoggingService.cs" />
     <Compile Include="Logging\LogMessageRecorder.cs" />
     <Compile Include="Logging\SDMessageService.cs" />
@@ -329,29 +343,7 @@
       <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Dom" />
-    <Folder Include="Dom\ClassBrowser" />
-    <Folder Include="Editor" />
-    <Folder Include="Editor\Bookmarks" />
-    <Folder Include="Templates" />
-    <Folder Include="Project" />
-    <Folder Include="Project\Build" />
-    <Folder Include="Project\Build\MSBuildEngine" />
-    <Folder Include="Project\Configuration" />
-    <Folder Include="Services" />
-    <Folder Include="Templates\CustomizationObject" />
-    <Folder Include="Templates\File" />
-    <Folder Include="Templates\Project" />
-    <Folder Include="WinForms" />
-    <Folder Include="OptionPanels" />
-    <Folder Include="Startup" />
-    <Folder Include="Workbench" />
-    <Folder Include="Logging" />
-    <Folder Include="Parser" />
-    <Folder Include="Sda" />
-    <Folder Include="Workbench\DisplayBinding" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Page Include="Dom\ClassBrowser\OpenFromGacDialog.xaml" />
     <Page Include="OptionPanels\LoadSaveOptions.xaml" />

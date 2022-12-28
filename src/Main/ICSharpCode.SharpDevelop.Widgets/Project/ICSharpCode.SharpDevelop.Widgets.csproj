@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <OutputType>Library</OutputType>
     <RootNamespace>ICSharpCode.SharpDevelop.Widgets</RootNamespace>
@@ -16,7 +16,7 @@
     <AssemblyOriginatorKeyFile>..\..\ICSharpCode.SharpDevelop.snk</AssemblyOriginatorKeyFile>
     <DelaySign>False</DelaySign>
     <AssemblyOriginatorKeyMode>File</AssemblyOriginatorKeyMode>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
   </PropertyGroup>
@@ -123,11 +123,7 @@
     <Page Include="themes\generic.xaml" />
     <Page Include="ZoomScrollViewer.xaml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Images" />
-    <Folder Include="MyersDiff" />
-    <Folder Include="themes" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Images\ZoomIn.png" />
     <Resource Include="Images\ZoomOut.png" />

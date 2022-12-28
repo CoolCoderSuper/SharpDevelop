@@ -17,7 +17,6 @@
 // DEALINGS IN THE SOFTWARE.
 
 using System;
-using Microsoft.Build.Framework;
 
 namespace ICSharpCode.SharpDevelop.BuildWorker
 {

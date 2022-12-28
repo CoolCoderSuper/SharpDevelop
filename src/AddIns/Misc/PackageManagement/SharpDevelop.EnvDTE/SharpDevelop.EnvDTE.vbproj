@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
   <PropertyGroup>
     <ProjectGuid>{1B753D7F-7C77-4D5E-B928-02982690879C}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -7,8 +7,9 @@
     <OutputType>Library</OutputType>
     <MyType>Empty</MyType>
     <AssemblyName>SharpDevelop.EnvDTE</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <OptionInfer>On</OptionInfer>
     <RemoveIntegerChecks>False</RemoveIntegerChecks>
@@ -36,6 +37,12 @@
     <DebugType>None</DebugType>
     <Optimize>True</Optimize>
     <DefineConstants>TRACE=1</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -121,7 +128,9 @@
     <Compile Include="Src\vsEPReplaceTextOptions.vb" />
     <Compile Include="Src\Window.vb" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="Src\Constants.vb" />
   </ItemGroup>

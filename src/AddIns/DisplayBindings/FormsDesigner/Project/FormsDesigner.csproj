@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -22,7 +22,7 @@
     <OutputPath>..\..\..\..\..\AddIns\DisplayBindings\FormsDesigner\</OutputPath>
     <BaseAddress>108003328</BaseAddress>
     <FileAlignment>4096</FileAlignment>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <SignAssembly>True</SignAssembly>
     <AssemblyOriginatorKeyFile>..\..\..\..\Main\ICSharpCode.SharpDevelop.snk</AssemblyOriginatorKeyFile>
     <DelaySign>False</DelaySign>
@@ -82,7 +82,9 @@
     <Compile Include="Src\DesignerLoader\CodeDOMVerboseOutputGenerator.cs" />
     <Compile Include="Src\DesignerLoader\NRefactoryDesignerLoader.cs" />
     <Compile Include="Src\DesignerSourceCodeStorage.cs" />
-    <Compile Include="Src\Gui\ImageResourceEditorDialog.cs" />
+    <Compile Include="Src\Gui\ImageResourceEditorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Src\Gui\ImageResourceEditorDialog.Designer.cs">
       <DependentUpon>ImageResourceEditorDialog.cs</DependentUpon>
     </Compile>

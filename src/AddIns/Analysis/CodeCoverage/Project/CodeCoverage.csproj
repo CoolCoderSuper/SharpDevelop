@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
   <PropertyGroup>
     <OutputType>Library</OutputType>
     <RootNamespace>ICSharpCode.CodeCoverage</RootNamespace>
@@ -16,7 +16,7 @@
     <FileAlignment>4096</FileAlignment>
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <RunCodeAnalysis>False</RunCodeAnalysis>
@@ -114,7 +114,9 @@
     <Compile Include="Src\CodeCoverageHighlighter.cs" />
     <Compile Include="Src\CodeCoverageOptions.cs" />
     <Compile Include="Src\CodeCoverageDisplayItem.cs" />
-    <Compile Include="Src\ColorPickerComboBox.cs" />
+    <Compile Include="Src\ColorPickerComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Src\CodeCoverageService.cs" />
     <Compile Include="Src\RunTestWithCodeCoverageCommand.cs" />
     <None Include="CodeCoverage.addin">

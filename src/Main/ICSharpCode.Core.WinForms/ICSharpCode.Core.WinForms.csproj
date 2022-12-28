@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ProjectGuid>{857CA1A3-FC88-4BE0-AB6A-D1EE772AB288}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -7,7 +7,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>ICSharpCode.Core.WinForms</RootNamespace>
     <AssemblyName>ICSharpCode.Core.WinForms</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <OutputPath>..\..\..\bin\</OutputPath>
     <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
@@ -63,19 +63,29 @@
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="Menu\IStatusUpdate.cs" />
-    <Compile Include="Menu\Menu.cs" />
+    <Compile Include="Menu\Menu.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Menu\MenuCheckBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Menu\MenuCommand.cs" />
-    <Compile Include="Menu\MenuSeparator.cs" />
+    <Compile Include="Menu\MenuCommand.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Menu\MenuSeparator.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Menu\MenuService.cs" />
     <Compile Include="MessageService\CustomDialog.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MessageService\IDialogMessageService.cs" />
-    <Compile Include="MessageService\InputBox.cs" />
-    <Compile Include="MessageService\SaveErrorChooseDialog.cs" />
+    <Compile Include="MessageService\InputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageService\SaveErrorChooseDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MessageService\SaveErrorInformDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,11 +94,15 @@
     <Compile Include="ToolBar\ToolBarCheckBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ToolBar\ToolBarCommand.cs" />
+    <Compile Include="ToolBar\ToolBarCommand.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ToolBar\ToolBarDropDownButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ToolBar\ToolBarLabel.cs" />
+    <Compile Include="ToolBar\ToolBarLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ToolBar\ToolBarSeparator.cs">
       <SubType>Component</SubType>
     </Compile>

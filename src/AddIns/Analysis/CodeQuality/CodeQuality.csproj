@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
   <PropertyGroup>
     <ProjectGuid>{3C532D80-32B4-40E5-B5FE-BC6BAE1A00E7}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -7,7 +7,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>ICSharpCode.CodeQuality</RootNamespace>
     <AssemblyName>ICSharpCode.CodeQuality</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <OutputPath>..\..\..\..\AddIns\Analysis\CodeQuality\</OutputPath>
     <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
@@ -113,15 +113,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reporting\DependencyReport - Kopie.srd" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Engine\Dom" />
-    <Folder Include="Gui" />
-    <Folder Include="Engine" />
-    <Folder Include="Gui\Commands" />
-    <Folder Include="Gui\Controls" />
-    <Folder Include="Reporting" />
-    <Folder Include="Utils" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Page Include="Gui\NodeDescription.xaml" />
     <Page Include="Gui\DependencyMatrixView.xaml" />

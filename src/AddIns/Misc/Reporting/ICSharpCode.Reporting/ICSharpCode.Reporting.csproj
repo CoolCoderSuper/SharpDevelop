@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
   <PropertyGroup>
     <ProjectGuid>{40CA84D4-ACFC-4646-9CDD-B87262D34093}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -7,7 +7,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>ICSharpCode.Reporting</RootNamespace>
     <AssemblyName>ICSharpCode.Reporting</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -157,7 +157,9 @@
     <Compile Include="Src\Items\PrintableItem.cs" />
     <Compile Include="Src\Items\ReportContainer.cs" />
     <Compile Include="Src\Items\ReportModel.cs" />
-    <Compile Include="Src\Items\ReportSettings.cs" />
+    <Compile Include="Src\Items\ReportSettings.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Src\Items\SortColumn.cs" />
     <Compile Include="Src\PageBuilder\BasePageBuilder.cs" />
     <Compile Include="Src\PageBuilder\Converter\ContainerConverter.cs" />
@@ -194,38 +196,7 @@
     <Compile Include="Src\Xml\ModelLoader.cs" />
     <Compile Include="Src\Xml\MycroParser.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Src\Exporter\Visitors" />
-    <Folder Include="Src\Expressions\Irony" />
-    <Folder Include="Src\Expressions\Irony\Ast" />
-    <Folder Include="Src\Expressions\Irony\Imports" />
-    <Folder Include="Src\Interfaces" />
-    <Folder Include="Src\Globals" />
-    <Folder Include="Src" />
-    <Folder Include="Src" />
-    <Folder Include="Src\Interfaces\Export" />
-    <Folder Include="Src\Interfaces\Data" />
-    <Folder Include="Src\Items" />
-    <Folder Include="Src\BaseClasses" />
-    <Folder Include="Src\Factories" />
-    <Folder Include="Src\Exporter" />
-    <Folder Include="Src\Arrange" />
-    <Folder Include="Src\DataSource" />
-    <Folder Include="Src\DataManager" />
-    <Folder Include="Src\DataManager\Listhandling" />
-    <Folder Include="Src\Expressions" />
-    <Folder Include="Src\Items\Graphics" />
-    <Folder Include="Src\Events" />
-    <Folder Include="Src\Pdf" />
-    <Folder Include="Src\Wpf" />
-    <Folder Include="Src\PageBuilder" />
-    <Folder Include="Src\PageBuilder\Converter" />
-    <Folder Include="Src\PageBuilder\ExportColumns" />
-    <Folder Include="Src\Wpf\Visitor" />
-    <Folder Include="Src\Wpf\Visitor\Graphics" />
-    <Folder Include="Src\Wpf\WpfReportViewer" />
-    <Folder Include="Src\Xml" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Page Include="Src\Wpf\WpfReportViewer\WpfReportViewer.xaml" />
   </ItemGroup>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -20,7 +20,7 @@
     <FileAlignment>4096</FileAlignment>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
     <RunPostBuildEvent>Always</RunPostBuildEvent>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <SourceAnalysisOverrideSettingsFile>"C:\Program Files\SharpDevelop\3.0\bin\..\AddIns\AddIns\Misc\SourceAnalysis\Settings.SourceAnalysis"</SourceAnalysisOverrideSettingsFile>
     <SourceAnalysisOverrideSettingsFile>C:\Dokumente und Einstellungen\HP\Anwendungsdaten\ICSharpCode/SharpDevelop3.0\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
     <PublishUrl>http://localhost/Debugger.AddIn/</PublishUrl>
@@ -302,26 +302,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Breakpoints" />
-    <Folder Include="Tooltips" />
-    <Folder Include="Visualizers" />
-    <Folder Include="Visualizers\Commands" />
-    <Folder Include="Visualizers\Common" />
-    <Folder Include="Visualizers\GraphVisualizer" />
-    <Folder Include="Visualizers\GraphVisualizer\Presentation" />
-    <Folder Include="Visualizers\GraphVisualizer\ExpandedPaths" />
-    <Folder Include="Visualizers\GraphVisualizer\Layout" />
-    <Folder Include="Visualizers\GraphVisualizer\Layout\SplineRouting" />
-    <Folder Include="Visualizers\GraphVisualizer\Layout\SplineRouting\RouteGraph" />
-    <Folder Include="Visualizers\GraphVisualizer\Layout\SplineRouting\ShortestPath" />
-    <Folder Include="Visualizers\GraphVisualizer\Layout\Tree" />
-    <Folder Include="Visualizers\GraphVisualizer\Layout\TreeModel" />
-    <Folder Include="Visualizers\GraphVisualizer\ObjectGraph" />
-    <Folder Include="Visualizers\GraphVisualizer\ObjectGraph\TreeModel" />
-    <Folder Include="Visualizers\GridVisualizer" />
-    <Folder Include="Visualizers\Presentation" />
-    <Folder Include="Visualizers\TextVisualizer" />
-    <Folder Include="Visualizers\Utils" />
     <Page Include="Breakpoints\BreakpointEditorPopup.xaml" />
     <Page Include="Options\ChooseExceptionsDialog.xaml" />
     <Page Include="Options\DebuggingOptionsPanel.xaml" />
@@ -342,7 +322,6 @@
       <Name>ICSharpCode.Core.WinForms</Name>
       <Private>False</Private>
     </ProjectReference>
-    <Folder Include="NRefactory" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
