@@ -65,9 +65,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\..\..\Main\GlobalAssemblyInfo.vb">
-      <Link>Configuration\GlobalAssemblyInfo.vb</Link>
-    </Compile>
     <Compile Include="CompareKind.vb" />
     <Compile Include="Configuration\AssemblyInfo.vb" />
     <Compile Include="OptionPanels\BuildOptions.xaml.vb">
