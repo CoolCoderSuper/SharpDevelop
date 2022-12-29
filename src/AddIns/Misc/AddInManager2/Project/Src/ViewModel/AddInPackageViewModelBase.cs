@@ -457,9 +457,9 @@ namespace ICSharpCode.AddInManager2.ViewModel
 			}
 		}
 		
-		protected string SurroundWithParantheses(string content)
+		protected string SurroundWithParentheses(string content)
 		{
-			return "(" + content + ")";
+			return $"({content})";
 		}
 	}
 }

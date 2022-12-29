@@ -177,7 +177,7 @@ namespace ICSharpCode.AddInManager2.Model
 						// Unknown format of file
 						_events.OnAddInOperationError(
 							new AddInOperationErrorEventArgs(
-								SD.ResourceService.GetString("AddInManager.UnknownFileFormat") + " " + Path.GetExtension(fileName)));
+								$"{SD.ResourceService.GetString("AddInManager.UnknownFileFormat")} {Path.GetExtension(fileName)}"));
 						return null;
 				}
 				

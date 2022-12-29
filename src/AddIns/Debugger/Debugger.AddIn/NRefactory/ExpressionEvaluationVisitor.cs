@@ -497,7 +497,7 @@ namespace Debugger.AddIn
 						}
 						sb.Append("}");
 					} else {
-						sb.AppendFormat(" ({0} elements)", count);
+						sb.Append($" ({count} elements)");
 					}
 					return sb.ToString();
 				}

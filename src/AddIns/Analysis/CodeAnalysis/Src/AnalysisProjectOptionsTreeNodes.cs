@@ -210,13 +210,13 @@ namespace ICSharpCode.CodeAnalysis
 		
 		
 		public override object Text {
-			get { return rule.CheckId + " : " + rule.DisplayName; }
+			get { return $"{rule.CheckId} : {rule.DisplayName}"; }
 		}
 		
 		
 		public string Identifier {
 			get {
-				return rule.CategoryName + "#" + rule.CheckId;
+				return $"{rule.CategoryName}#{rule.CheckId}";
 			}
 		}
 		

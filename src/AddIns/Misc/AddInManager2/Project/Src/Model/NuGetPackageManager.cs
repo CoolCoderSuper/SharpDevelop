@@ -121,7 +121,7 @@ namespace ICSharpCode.AddInManager2.Model
 		
 		public string GetLocalPackageDirectory(IPackage package)
 		{
-			return Path.Combine(PackageOutputDirectory, package.Id + "." + package.Version.ToString());
+			return Path.Combine(PackageOutputDirectory, $"{package.Id}.{package.Version}");
 		}
 		
 		private IPackageManager EnsurePackageManagerInstance()

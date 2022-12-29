@@ -86,7 +86,7 @@ namespace ICSharpCode.CodeCoverage
 			StringBuilder text = new StringBuilder();
 			foreach (String item in items) {
 				text.Append(item);
-				text.Append("\r\n");
+				text.Append(Environment.NewLine);
 			}
 			return text.ToString().Trim();
 		}

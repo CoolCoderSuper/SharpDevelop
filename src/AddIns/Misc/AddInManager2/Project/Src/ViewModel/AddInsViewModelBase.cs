@@ -209,7 +209,7 @@ namespace ICSharpCode.AddInManager2.ViewModel
 			{
 				if (_highlightCount > 0)
 				{
-					return String.Format("{0} ({1})", Title, _highlightCount);
+					return $"{Title} ({_highlightCount})";
 				}
 				else
 				{

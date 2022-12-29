@@ -38,8 +38,7 @@ namespace ICSharpCode.CodeAnalysis
 			if (path == null) {
 				status.Text = StringParser.Parse("${res:ICSharpCode.CodeAnalysis.IdeOptions.FxCopNotFound}");
 			} else {
-				status.Text = StringParser.Parse("${res:ICSharpCode.CodeAnalysis.IdeOptions.FxCopFoundInPath}")
-					+ Environment.NewLine + path;
+				status.Text = $"{StringParser.Parse("${res:ICSharpCode.CodeAnalysis.IdeOptions.FxCopFoundInPath}")}{Environment.NewLine}{path}";
 			}
 		}
 		

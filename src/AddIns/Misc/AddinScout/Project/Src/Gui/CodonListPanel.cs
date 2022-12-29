@@ -96,7 +96,7 @@ namespace AddInScout
 				return;
 			}
 			
-			ExtTextBox.Text = "Extension : " + path;
+			ExtTextBox.Text = $"Extension : {path}";
 			
 			AddInTreeNode node = AddInTree.GetTreeNode(path, false);
 			if (node == null) return;
@@ -107,7 +107,7 @@ namespace AddInScout
 				
 				lvi.SubItems.Add(c.Properties.Contains("class") ? c.Properties["class"] : "");
 				
-				lvi.SubItems.Add(string.Join(";", c.Conditions.Select(a => a.Name + ": " + a.Action)));
+				lvi.SubItems.Add(string.Join(";", c.Conditions.Select(a => $"{a.Name}: {a.Action}")));
 				lvi.SubItems.Add(c.Properties.Contains("label") ? c.Properties["label"] : "");
 				CodonLV.Items.Add(lvi);
 			}

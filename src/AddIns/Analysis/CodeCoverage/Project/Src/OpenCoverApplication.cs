@@ -116,23 +116,23 @@ namespace ICSharpCode.CodeCoverage
 		
 		void AppendTarget()
 		{
-			arguments.AppendFormat("-target:\"{0}\" ", Target);
+			arguments.Append($"-target:\"{Target}\" ");
 		}
 		
 		void AppendTargetWorkingDirectory()
 		{
-			arguments.AppendFormat("-targetdir:\"{0}\" ", GetTargetWorkingDirectory());
+			arguments.Append($"-targetdir:\"{GetTargetWorkingDirectory()}\" ");
 		}
 		
 		void AppendTargetArguments()
 		{
 			string targetArguments = GetTargetArguments();
-			arguments.AppendFormat("-targetargs:\"{0}\" ", targetArguments.Replace("\"", "\\\""));
+			arguments.Append($"-targetargs:\"{(targetArguments.Replace("\"", "\\\""))}\" ");
 		}
 		
 		void AppendCodeCoverageResultsFileName()
 		{
-			arguments.AppendFormat("-output:\"{0}\" ", CodeCoverageResultsFileName);
+			arguments.Append($"-output:\"{CodeCoverageResultsFileName}\" ");
 		}
 		
 		void AppendFilter()
@@ -173,7 +173,7 @@ namespace ICSharpCode.CodeCoverage
 		{
 			StringBuilder itemArgs = new StringBuilder();
 			foreach (string item in items) {
-				itemArgs.AppendFormat("{0}{1} ", optionName, item);
+				itemArgs.Append($"{optionName}{item} ");
 			}
 			return itemArgs.ToString().Trim();
 		}

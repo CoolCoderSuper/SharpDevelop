@@ -251,16 +251,16 @@ namespace ICSharpCode.AddInManager2.ViewModel
 					}
 					else
 					{
-						return SurroundWithParantheses(SD.ResourceService.GetString("AddInManager.AddInInstalled"));
+						return SurroundWithParentheses(SD.ResourceService.GetString("AddInManager.AddInInstalled"));
 					}
 				}
 				else if (IsRemoved)
 				{
-					return SurroundWithParantheses(SD.ResourceService.GetString("AddInManager.AddInRemoved"));
+					return SurroundWithParentheses(SD.ResourceService.GetString("AddInManager.AddInRemoved"));
 				}
 				else if (!IsEnabled)
 				{
-					return SurroundWithParantheses(SD.ResourceService.GetString("AddInManager.AddInDisabled"));
+					return SurroundWithParentheses(SD.ResourceService.GetString("AddInManager.AddInDisabled"));
 				}
 				else
 				{

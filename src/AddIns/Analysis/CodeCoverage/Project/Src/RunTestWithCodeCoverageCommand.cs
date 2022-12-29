@@ -152,7 +152,7 @@ namespace ICSharpCode.CodeCoverage
 		string GetNoCodeCoverageResultsGeneratedTaskDescription(string fileName)
 		{
 			string message = StringParser.Parse("${res:ICSharpCode.CodeCoverage.NoCodeCoverageResultsGenerated}");
-			return String.Format("{0} {1}", message, fileName);
+			return $"{message} {fileName}";
 		}
 	}
 }

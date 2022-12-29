@@ -135,7 +135,7 @@ namespace ICSharpCode.CodeCoverage
 		void WriteRuleElements(XmlWriter writer, string prefix, StringCollection rules)
 		{
 			foreach (string rule in rules) {
-				writer.WriteElementString(RuleElementName, prefix + rule);
+				writer.WriteElementString(RuleElementName, $"{prefix}{rule}");
 			}
 		}
 		

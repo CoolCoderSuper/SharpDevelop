@@ -71,7 +71,7 @@ namespace ICSharpCode.CodeAnalysis
 		
 		public override string ToString()
 		{
-			return string.Format("[FxCopRule {0}#{1}]", this.categoryName, this.checkId);
+			return $"[FxCopRule {categoryName}#{checkId}]";
 		}
 		
 		public int CompareTo(object obj)
@@ -116,7 +116,7 @@ namespace ICSharpCode.CodeAnalysis
 		
 		public override string ToString()
 		{
-			return string.Format("[FxCopCategory {0}]", this.name);
+			return $"[FxCopCategory {name}]";
 		}
 	}
 }

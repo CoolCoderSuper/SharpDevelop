@@ -35,7 +35,7 @@ namespace ICSharpCode.CodeAnalysis
 	{
 		public IMSBuildChainedLoggerFilter CreateFilter(IMSBuildLoggerContext context, IMSBuildChainedLoggerFilter nextFilter)
 		{
-			context.OutputTextLine(StringParser.Parse("${res:ICSharpCode.CodeAnalysis.RunningFxCopOn} " + context.ProjectFileName.GetFileNameWithoutExtension()));
+			context.OutputTextLine(StringParser.Parse($"${{res:ICSharpCode.CodeAnalysis.RunningFxCopOn}} {context.ProjectFileName.GetFileNameWithoutExtension()}"));
 			return new FxCopLoggerImpl(context, nextFilter);
 		}
 		
@@ -52,7 +52,7 @@ namespace ICSharpCode.CodeAnalysis
 			
 			public void HandleError(BuildError error)
 			{
-				LoggingService.Debug("FxCopLogger got " + error.ToString());
+				LoggingService.Debug($"FxCopLogger got {error}");
 				
 				string[] moreData = (error.Subcategory ?? "").Split('|');
 				string checkId = error.ErrorCode;

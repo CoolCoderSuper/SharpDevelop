@@ -197,7 +197,7 @@ namespace ICSharpCode.CodeCoverage
 				}
 			}
 			
-			// Add toolstrip - need to re-add it last otherwise the
+			// Add tool strip - need to re-add it last otherwise the
 			// other controls will be displayed underneath it.
 			if (toolStrip == null) {
 				toolStrip = ToolbarService.CreateToolStrip(this, "/SharpDevelop/Pads/CodeCoveragePad/Toolbar");
@@ -350,7 +350,7 @@ namespace ICSharpCode.CodeCoverage
 		bool TryLoadFileIntoTextEditor(string fileName)
 		{
 			if (!File.Exists(fileName)) {
-				textEditor.Text = String.Format("File does not exist '{0}'.", fileName);
+				textEditor.Text = $"File does not exist '{fileName}'.";
 				return false;
 			}
 			
@@ -588,7 +588,7 @@ namespace ICSharpCode.CodeCoverage
 		}
 		
 		/// <summary>
-		/// If the treeview is to be moved to a different parent then
+		/// If the tree view is to be moved to a different parent then
 		/// it needs to be recreated otherwise the OnBeforeExpand method
 		/// is never called.
 		/// </summary>

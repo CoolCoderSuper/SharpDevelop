@@ -22,7 +22,7 @@ using System.Drawing;
 namespace ICSharpCode.CodeCoverage
 {
 	/// <summary>
-	/// Represents a code coverage display item that can have its colour customised 
+	/// Represents a code coverage display item that can have its colour customized 
 	/// (e.g. Visited code and Not visited code.
 	/// </summary>
 	public class CodeCoverageDisplayItem
@@ -44,7 +44,7 @@ namespace ICSharpCode.CodeCoverage
 		}
 		
 		/// <summary>
-		/// Gets whether any of the colours has changed from their origina values.
+		/// Gets whether any of the colours have changed from their original values.
 		/// </summary>
 		public bool HasChanged {
 			get {

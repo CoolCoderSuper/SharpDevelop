@@ -116,8 +116,7 @@ namespace ICSharpCode.CodeCoverage
 		
 		public override string ToString()
 		{
-			return String.Format("Document: '{0}' VisitCount: {1} Line: {2} Col: {3} EndLine: {4} EndCol: {5} Length: {6}",
-				Document, VisitCount, Line, Column, EndLine, EndColumn, Length);
+			return $"Document: '{Document}' VisitCount: {VisitCount} Line: {Line} Col: {Column} EndLine: {EndLine} EndCol: {EndColumn} Length: {Length}";
 		}
 	}
 }

@@ -103,10 +103,10 @@ namespace ICSharpCode.CodeCoverage
 		{
 			if (TotalCodeLength > 0) {
 				if ( visitedCodeLength == TotalCodeLength && visitedBranchCoverage != 0 && visitedBranchCoverage != 100 ) {
-					return String.Format("{0} (100%/{1}%)", Name, decimal.Round (visitedBranchCoverage, 2));
+					return $"{Name} (100%/{(decimal.Round(visitedBranchCoverage, 2))}%)";
 				}
 				int percentage = GetPercentage();
-				return String.Format("{0} ({1}%)", Name, percentage);
+				return $"{Name} ({percentage}%)";
 			}
 			return Name;
 		}

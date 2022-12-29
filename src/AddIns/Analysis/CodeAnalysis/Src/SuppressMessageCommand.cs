@@ -78,7 +78,7 @@ namespace ICSharpCode.CodeAnalysis
 		
 		static IMember GetMember(ITypeDefinition type, string memberName)
 		{
-			string fullName = type.ReflectionName + "." + memberName;
+			string fullName = $"{type.ReflectionName}.{memberName}";
 			return type.GetMembers(m => m.ReflectionName == fullName).FirstOrDefault();
 		}
 		

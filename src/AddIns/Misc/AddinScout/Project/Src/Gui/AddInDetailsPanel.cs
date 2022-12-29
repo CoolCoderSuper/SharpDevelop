@@ -80,7 +80,7 @@ namespace AddInScout
 		
 		public void ShowAddInDetails(AddIn ai)
 		{
-			addInLabel.Text = "AddIn : " + ai.Properties["name"];
+			addInLabel.Text = $"AddIn : {ai.Properties["name"]}";
 			
 			addInDetailsListView.Items.Clear();
 			
@@ -102,7 +102,7 @@ namespace AddInScout
 			
 			foreach (KeyValuePair<string, Version> entry in ai.Manifest.Identities) {
 				ListViewItem newListViewItem = new ListViewItem("Identity");
-				newListViewItem.SubItems.Add(entry.Key + " = " + entry.Value);
+				newListViewItem.SubItems.Add($"{entry.Key} = {entry.Value}");
 				addInDetailsListView.Items.Add(newListViewItem);
 			}
 			

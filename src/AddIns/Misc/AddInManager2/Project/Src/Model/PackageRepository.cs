@@ -90,7 +90,7 @@ namespace ICSharpCode.AddInManager2.Model
 			{
 				if (_highlightCount > 0)
 				{
-					return String.Format("{0} ({1})", Name, _highlightCount);
+					return $"{Name} ({_highlightCount})";
 				}
 				else
 				{

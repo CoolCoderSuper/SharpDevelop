@@ -350,7 +350,7 @@ namespace ICSharpCode.AddInManager2.ViewModel
 				{
 					if (_addIn.Action == AddInAction.Install)
 					{
-						return SurroundWithParantheses(SD.ResourceService.GetString("AddInManager.AddInInstalled"));
+						return SurroundWithParentheses(SD.ResourceService.GetString("AddInManager.AddInInstalled"));
 					}
 					else if (_addIn.Action == AddInAction.Update)
 					{
@@ -358,30 +358,30 @@ namespace ICSharpCode.AddInManager2.ViewModel
 					}
 					else if (HasDependencyConflicts)
 					{
-						return SurroundWithParantheses(SD.ResourceService.GetString("AddInManager.AddInDependencyFailed"));
+						return SurroundWithParentheses(SD.ResourceService.GetString("AddInManager.AddInDependencyFailed"));
 					}
 					else if (IsRemoved)
 					{
-						return SurroundWithParantheses(SD.ResourceService.GetString("AddInManager.AddInRemoved"));
+						return SurroundWithParentheses(SD.ResourceService.GetString("AddInManager.AddInRemoved"));
 					}
 					else if (IsEnabled && !_addIn.Enabled)
 					{
-						return SurroundWithParantheses(SD.ResourceService.GetString("AddInManager.AddInEnabled"));
+						return SurroundWithParentheses(SD.ResourceService.GetString("AddInManager.AddInEnabled"));
 					}
 					else if (!IsEnabled)
 					{
 						if (_addIn.Enabled)
 						{
-							return SurroundWithParantheses(SD.ResourceService.GetString("AddInManager.AddInWillBeDisabled"));
+							return SurroundWithParentheses(SD.ResourceService.GetString("AddInManager.AddInWillBeDisabled"));
 						}
 						else
 						{
-							return SurroundWithParantheses(SD.ResourceService.GetString("AddInManager.AddInDisabled"));
+							return SurroundWithParentheses(SD.ResourceService.GetString("AddInManager.AddInDisabled"));
 						}
 					}
 					else if (_addIn.Action == AddInAction.InstalledTwice)
 					{
-						return SurroundWithParantheses(SD.ResourceService.GetString("AddInManager.AddInInstalledTwice"));
+						return SurroundWithParentheses(SD.ResourceService.GetString("AddInManager.AddInInstalledTwice"));
 					}
 					else
 					{
@@ -510,7 +510,7 @@ namespace ICSharpCode.AddInManager2.ViewModel
 					string addInNames = "";
 					foreach (var dependentAddIn in dependentAddIns)
 					{
-						addInNames += "\t " + dependentAddIn.AddIn.Name + Environment.NewLine;
+						addInNames += $"\t {dependentAddIn.AddIn.Name}{Environment.NewLine}";
 					}
 					if (!MessageService.AskQuestionFormatted(
 						"${res:AddInManager.Title}", "${res:AddInManager2.DisableDependentWarning}", _addIn.Name, addInNames))
@@ -566,7 +566,7 @@ namespace ICSharpCode.AddInManager2.ViewModel
 					string addInNames = "";
 					foreach (var dependentAddIn in dependentAddIns)
 					{
-						addInNames += "\t " + dependentAddIn.AddIn.Name + Environment.NewLine;
+						addInNames += $"\t {dependentAddIn.AddIn.Name}{Environment.NewLine}";
 					}
 					if (!MessageService.AskQuestionFormatted(
 						"${res:AddInManager.Title}", "${res:AddInManager2.DisableDependentWarning}", _addIn.Name, addInNames))
@@ -610,7 +610,7 @@ namespace ICSharpCode.AddInManager2.ViewModel
 				}
 			}
 			ICSharpCode.SharpDevelop.Commands.OptionsCommand.ShowTabbedOptions(
-				_addIn.Name + " " + SD.ResourceService.GetString("AddInManager.Options"),
+				$"{_addIn.Name} {SD.ResourceService.GetString("AddInManager.Options")}",
 				dummyNode);
 		}
 		

@@ -27,7 +27,7 @@ namespace ICSharpCode.AddInManager2.Model
 		
 		public override string ToString()
 		{
-			return String.Format("[Page] Number={0}, IsSelected={1}", Number, IsSelected);
+			return $"[Page] Number={Number}, IsSelected={IsSelected}";
 		}
 	}
 }

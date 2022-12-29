@@ -202,7 +202,7 @@ namespace ICSharpCode.CodeCoverage
 			var items = new List<string>();
 			foreach (CodeCoverageMethod method in methods) {
 				string classNamespace = method.ClassNamespace;
-				string dottedParentNamespace = parentNamespace + ".";
+				string dottedParentNamespace = $"{parentNamespace}.";
 				if (classNamespace.Length > parentNamespace.Length && classNamespace.StartsWith(dottedParentNamespace)) {
 					string ns = CodeCoverageMethod.GetChildNamespace(method.ClassNamespace, parentNamespace);
 					if (!items.Contains(ns)) {
@@ -221,7 +221,7 @@ namespace ICSharpCode.CodeCoverage
 			var matchedMethods = new List<CodeCoverageMethod>();
 			namespaceStartsWith += ".";
 			foreach (CodeCoverageMethod method in methods) {
-				if ((method.ClassNamespace + ".").StartsWith(namespaceStartsWith, StringComparison.Ordinal)) {
+				if (($"{method.ClassNamespace}.").StartsWith(namespaceStartsWith, StringComparison.Ordinal)) {
 					matchedMethods.Add(method);
 				}
 			}

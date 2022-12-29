@@ -142,7 +142,7 @@ namespace ICSharpCode.AddInManager2.Model
 		private void SavePackageSources()
 		{
 			AddDefaultRepository();
-			var savedRepositories = _registeredPackageSources.Select(ps => ps.Name + "=" + ps.Source);
+			var savedRepositories = _registeredPackageSources.Select(ps => $"{ps.Name}={ps.Source}");
 			_settings.PackageRepositories = savedRepositories.ToArray();
 			UpdateCurrentRepository();
 		}

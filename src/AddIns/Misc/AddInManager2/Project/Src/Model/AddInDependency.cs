@@ -151,7 +151,7 @@ namespace ICSharpCode.AddInManager2.Model
 			{
 				string constraintOperator = isMinimum ? ">" : "<";
 				string equalityOperator = includeVersion ? "=" : "";
-				return String.Format("{0}{1} {2}", constraintOperator, equalityOperator, version.ToString());
+				return $"{constraintOperator}{equalityOperator} {version.ToString()}";
 			}
 		}
 	}
