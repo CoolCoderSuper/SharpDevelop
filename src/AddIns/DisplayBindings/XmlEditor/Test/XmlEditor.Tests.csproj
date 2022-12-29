@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -20,7 +20,7 @@
     <Optimize>False</Optimize>
     <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
     <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <DebugSymbols>true</DebugSymbols>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -250,9 +250,15 @@
     <Compile Include="Utils\Tests\XPathNodeMatchComparisonResultTests.cs" />
     <Compile Include="Utils\XmlFoldParserHelper.cs" />
     <Compile Include="Utils\XPathNodeMatchComparisonResult.cs" />
-    <Compile Include="Utils\DerivedAddXmlNodeDialog.cs" />
-    <Compile Include="Utils\DerivedXmlTreeView.cs" />
-    <Compile Include="Utils\DerivedXmlTreeViewContainerControl.cs" />
+    <Compile Include="Utils\DerivedAddXmlNodeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utils\DerivedXmlTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utils\DerivedXmlTreeViewContainerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Utils\ExceptionErrorMessage.cs" />
     <Compile Include="Utils\FormattedErrorMessage.cs" />
     <Compile Include="Utils\MockAddXmlNodeDialog.cs" />
@@ -337,13 +343,6 @@
     <Compile Include="Tree\InsertElementAfterTestFixture.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Completion" />
-    <Folder Include="Editor" />
-    <Folder Include="Folding" />
-    <Folder Include="Schema.Multiple" />
-    <Folder Include="Schema\" />
-    <Folder Include="Parser\" />
-    <Folder Include="Paths\" />
     <ProjectReference Include="..\..\..\..\Libraries\AvalonEdit\ICSharpCode.AvalonEdit\ICSharpCode.AvalonEdit.csproj">
       <Project>{6C55B776-26D4-4DB3-A6AB-87E783B2F3D1}</Project>
       <Name>ICSharpCode.AvalonEdit</Name>
@@ -366,9 +365,6 @@
       <Name>XmlEditor</Name>
       <Private>True</Private>
     </ProjectReference>
-    <Folder Include="Utils" />
-    <Folder Include="Utils\Tests" />
-    <Folder Include="XPath" />
     <ProjectReference Include="..\..\..\..\Main\Base\Project\ICSharpCode.SharpDevelop.csproj">
       <Project>{2748AD25-9C63-4E12-877B-4DCE96FBED54}</Project>
       <Name>ICSharpCode.SharpDevelop</Name>
@@ -377,8 +373,6 @@
       <Project>{35CEF10F-2D4C-45F2-9DD1-161E0FEC583C}</Project>
       <Name>ICSharpCode.Core</Name>
     </ProjectReference>
-    <Folder Include="FindSchemaObject" />
-    <Folder Include="Tree" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\xslt.xsd" />

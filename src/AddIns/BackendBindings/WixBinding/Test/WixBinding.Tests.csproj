@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <OutputType>Library</OutputType>
     <RootNamespace>WixBinding.Tests</RootNamespace>
@@ -16,7 +16,7 @@
     <FileAlignment>4096</FileAlignment>
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -113,7 +113,9 @@
     <Compile Include="Project\WixBuilderCannotBuildNonWixProjectTestFixture.cs" />
     <Compile Include="Gui\WixProjectWithUnexpandedLibraryItemsTestFixture.cs" />
     <Compile Include="Project\WixProjectTests.cs" />
-    <Compile Include="Utils\DerivedAddElementCommand.cs" />
+    <Compile Include="Utils\DerivedAddElementCommand.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Utils\MockCaret.cs" />
     <Compile Include="Utils\MockFormsDesignerView.cs" />
     <Compile Include="Utils\MockOpenedFile.cs" />
@@ -309,7 +311,6 @@
     <Compile Include="DirectoryImport\AddDirectoryWithInvalidIdCharsTestFixture.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Utils\Tests" />
     <ProjectReference Include="..\..\..\..\Libraries\AvalonEdit\ICSharpCode.AvalonEdit\ICSharpCode.AvalonEdit.csproj">
       <Project>{6C55B776-26D4-4DB3-A6AB-87E783B2F3D1}</Project>
       <Name>ICSharpCode.AvalonEdit</Name>
@@ -348,16 +349,6 @@
       <Link>FormsDesigner.dll</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>-->
-    <Folder Include="Gui" />
-    <Folder Include="Project" />
-    <Folder Include="Utils" />
-    <Folder Include="DialogLoading" />
-    <Folder Include="DialogXmlGeneration" />
-    <Folder Include="Document" />
-    <Folder Include="PackageFiles" />
-    <Folder Include="PropertyGrid" />
-    <Folder Include="DirectoryImport" />
-    <Folder Include="Diff" />
     <ProjectReference Include="..\..\..\..\Main\ICSharpCode.SharpDevelop.Widgets\Project\ICSharpCode.SharpDevelop.Widgets.csproj">
       <Project>{8035765F-D51F-4A0C-A746-2FD100E19419}</Project>
       <Name>ICSharpCode.SharpDevelop.Widgets</Name>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
   <PropertyGroup>
     <ProjectGuid>{97CA9CE5-B966-48DF-BB59-F00FFC534B1F}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -7,7 +7,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>ICSharpCode.Reporting.Test</RootNamespace>
     <AssemblyName>ICSharpCode.Reporting.Tests</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -90,19 +90,7 @@
     <Compile Include="src\ReportItems\TextItemFixture.cs" />
     <Compile Include="src\TestHelper.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="src" />
-    <Folder Include="src\Expressions\IntegrationTests" />
-    <Folder Include="src\Expressions\Aggregates" />
-    <Folder Include="src\Model" />
-    <Folder Include="src\DataSource" />
-    <Folder Include="src\MeasureArrange" />
-    <Folder Include="src\Expressions" />
-    <Folder Include="src\Reportingfactory" />
-    <Folder Include="src\ReportItems" />
-    <Folder Include="src\PageBuilder" />
-    <Folder Include="src\TestReports" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\..\ICSharpCode.Reporting.csproj">
       <Project>{40CA84D4-ACFC-4646-9CDD-B87262D34093}</Project>

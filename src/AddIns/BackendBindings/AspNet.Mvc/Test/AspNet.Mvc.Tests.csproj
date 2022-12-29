@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
   <PropertyGroup>
     <ProjectGuid>{0B12A079-B2DB-42B9-8A8E-AA5CBC2B3225}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -7,7 +7,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>AspNet.Mvc.Tests</RootNamespace>
     <AssemblyName>AspNet.Mvc.Tests</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <OutputPath>..\..\..\..\..\bin\UnitTests\</OutputPath>
     <TargetFrameworkProfile />
@@ -196,12 +196,6 @@
       <Name>AspNet.Mvc</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Helpers" />
-    <Folder Include="Src\CodeTemplates" />
-    <Folder Include="Src\CodeTemplates\Models" />
-    <Folder Include="Src\Folding" />
-    <Folder Include="Src\Completion" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
 </Project>

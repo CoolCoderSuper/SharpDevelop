@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -24,13 +24,14 @@
     <RegisterForComInterop>False</RegisterForComInterop>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <DebugSymbols>true</DebugSymbols>
     <SignAssembly>True</SignAssembly>
     <AssemblyOriginatorKeyFile>..\..\ICSharpCode.SharpDevelop.snk</AssemblyOriginatorKeyFile>
     <DelaySign>False</DelaySign>
     <NoWin32Manifest>False</NoWin32Manifest>
     <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
     <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
@@ -193,9 +194,7 @@
     <EmbeddedResource Include="mime_utf-16_be_test.txt" />
     <EmbeddedResource Include="mime_utf-16_le_test.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ProcessRunner" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="mime_bug1.txt" />
   </ItemGroup>

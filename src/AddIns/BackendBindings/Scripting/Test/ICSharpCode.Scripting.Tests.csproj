@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
   <PropertyGroup>
     <ProjectGuid>{85C09AD8-183B-403A-869A-7226646218A9}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -7,7 +7,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>ICSharpCode.Scripting.Tests</RootNamespace>
     <AssemblyName>ICSharpCode.Scripting.Tests</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
     <NoStdLib>False</NoStdLib>
     <WarningLevel>4</WarningLevel>
@@ -62,15 +62,7 @@
       <RequiredTargetFramework>3.0</RequiredTargetFramework>
     </Reference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Configuration" />
-    <Folder Include="Console" />
-    <Folder Include="Designer" />
-    <Folder Include="Resolver" />
-    <Folder Include="Testing" />
-    <Folder Include="Utils" />
-    <Folder Include="Utils\Tests" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Compile Include="Configuration\AssemblyInfo.cs" />
     <Compile Include="Console\CommandLineHistoryTestFixture.cs" />
@@ -122,10 +114,16 @@
     <Compile Include="Utils\CreatedComponent.cs" />
     <Compile Include="Utils\CreatedInstance.cs" />
     <Compile Include="Utils\CustomClassTypeConverter.cs" />
-    <Compile Include="Utils\CustomUserControl.cs" />
+    <Compile Include="Utils\CustomUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Utils\DerivedFormDesignerViewContent.cs" />
-    <Compile Include="Utils\DerivedToolStripMenuItem.cs" />
-    <Compile Include="Utils\DoublePropertyUserControl.cs" />
+    <Compile Include="Utils\DerivedToolStripMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utils\DoublePropertyUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Utils\FakeCaret.cs" />
     <Compile Include="Utils\FakeCodeDomSerializer.cs" />
     <Compile Include="Utils\FakeComponentWalker.cs" />
@@ -164,8 +162,12 @@
     <Compile Include="Utils\MockTypeResolutionService.cs" />
     <Compile Include="Utils\MockViewContent.cs" />
     <Compile Include="Utils\MockWorkbench.cs" />
-    <Compile Include="Utils\NullPropertyUserControl.cs" />
-    <Compile Include="Utils\SupportInitCustomControl.cs" />
+    <Compile Include="Utils\NullPropertyUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Utils\SupportInitCustomControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Utils\TestableScriptingConsole.cs" />
     <Compile Include="Utils\TestableScriptingDesignerGenerator.cs" />
     <Compile Include="Utils\TestableScriptingDesignerLoader.cs" />
