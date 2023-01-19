@@ -1237,7 +1237,8 @@ namespace ICSharpCode.SharpDevelop.Project
 							// successful upgrade has loaded the project
 						} else if (projectFile != null && projectFile.ToolsVersion == "12.0") {
 							// ToolsVersion 12.0 not found: the user needs to install Microsoft Build Tools 2013
-							throw new ToolNotFoundProjectLoadException(ex.Message, ex) {
+							throw new ToolNotFoundProjectLoadException(ex.Message, ex)
+							{
 								Description = "Microsoft Build Tools 2013 are necessary for opening Visual Studio 2013 solutions.",
 								LinkTarget = "http://www.microsoft.com/en-us/download/details.aspx?id=40760"
 							};
