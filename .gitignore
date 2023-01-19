@@ -30,3 +30,4 @@ bin/
 *.DotSettings.user
 *.suo
 .DS_Store
+/JSON/Schemas/Catalog

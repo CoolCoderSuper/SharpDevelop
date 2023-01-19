@@ -180,7 +180,7 @@ namespace ICSharpCode.SharpDevelop.Templates
 			if (config["SupportedTargetFrameworks"] != null) {
 				var specifiedTargetFrameworks =
 					config["SupportedTargetFrameworks"].InnerText.Split(';')
-					.Select<string,TargetFramework>(TargetFramework.GetByName).ToArray();
+					.Select(TargetFramework.GetByName).ToArray();
 				
 				supportedTargetFrameworks = SD.ProjectService.TargetFrameworks.Where(fx => specifiedTargetFrameworks.Any(s => fx.IsBasedOn(s))).ToArray();
 			} else {
