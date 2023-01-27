@@ -16,6 +16,7 @@
 // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
 
+using Microsoft.Build.Locator;
 using System;
 using System.Linq;
 using System.Windows;
@@ -29,6 +30,9 @@ namespace ICSharpCode.SharpDevelop.Startup
 	{
 		public App()
 		{
+			//MSBuildLocator.RegisterInstance(MSBuildLocator.QueryVisualStudioInstances().OrderByDescending(
+	  //instance => instance.Version).First());
+			MSBuildLocator.RegisterDefaults();
 			InitializeComponent();
 		}
 	}
