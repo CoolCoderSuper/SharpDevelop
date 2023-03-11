@@ -3,7 +3,7 @@
 	url = https://github.com/CoolCoderSuper/AvalonEdit.git
 [submodule "src/Libraries/NRefactory"]
 	path = src/Libraries/NRefactory
-	url = https://github.com/icsharpcode/NRefactory.git
+	url = https://github.com/CoolCoderSuper/NRefactory.git
 [submodule "src/Libraries/cecil"]
 	path = src/Libraries/cecil
 	url = https://github.com/jbevain/cecil.git
