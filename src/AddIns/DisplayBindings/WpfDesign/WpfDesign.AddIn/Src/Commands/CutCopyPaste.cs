@@ -71,7 +71,8 @@ namespace ICSharpCode.WpfDesign.AddIn.Commands
         {
             var surface = owner as DesignSurface;
             if(surface!=null) {
-                return surface.CanCopyOrCut();
+				//TODO: Look at the CanCut method as well
+                return surface.CanCopy();
             }
             return false;
         }
