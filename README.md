@@ -1,5 +1,9 @@
 # #develop (short for SharpDevelop) 
 
+This is an attempt to modernize SharpDevelop.
+Currently #develop doesn't support modern language features of C#, SDK style projects, or .NET Core. Which renders it almost useless in the real world.
+The goal is to provide at least basic support for the above mentioned issues. Any help would be greatly appreciated.
+
 ## Overview
 
  #develop is a free Integrated Development Environment
