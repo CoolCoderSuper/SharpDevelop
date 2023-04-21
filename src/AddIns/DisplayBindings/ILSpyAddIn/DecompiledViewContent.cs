@@ -26,7 +26,7 @@ using System.Threading;
 using ICSharpCode.AvalonEdit.AddIn;
 using ICSharpCode.AvalonEdit.Highlighting;
 using ICSharpCode.Core;
-using ICSharpCode.Decompiler;
+//using ICSharpCode.Decompiler;
 using ICSharpCode.SharpDevelop.Gui;
 using ICSharpCode.ILSpyAddIn;
 using ICSharpCode.NRefactory;
@@ -54,7 +54,7 @@ namespace ICSharpCode.ILSpyAddIn
 		readonly CancellationTokenSource cancellation = new CancellationTokenSource();
 		
 		Dictionary<string, TextLocation> memberLocations;
-		public Dictionary<string, MethodDebugSymbols> DebugSymbols { get; private set; }
+		//public Dictionary<string, MethodDebugSymbols> DebugSymbols { get; private set; }
 		
 		#region Constructor
 		public DecompiledViewContent(DecompiledTypeReference typeName, string entityTag)
@@ -147,7 +147,7 @@ namespace ICSharpCode.ILSpyAddIn
 				if (parseInformation == null || !(parseInformation.UnresolvedFile is ILSpyUnresolvedFile)) return;
 				var file = (ILSpyUnresolvedFile)parseInformation.UnresolvedFile;
 				memberLocations = file.MemberLocations;
-				DebugSymbols = file.DebugSymbols;
+				//DebugSymbols = file.DebugSymbols;
 				OnDecompilationFinished(file.Output);
 			} catch (OperationCanceledException) {
 				// ignore cancellation

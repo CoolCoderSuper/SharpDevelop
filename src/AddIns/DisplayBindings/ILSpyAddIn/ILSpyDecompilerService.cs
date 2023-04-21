@@ -25,8 +25,8 @@ using System.Threading;
 using System.Threading.Tasks;
 
 using ICSharpCode.Core;
-using ICSharpCode.Decompiler;
-using ICSharpCode.Decompiler.Ast;
+//using ICSharpCode.Decompiler;
+//using ICSharpCode.Decompiler.Ast;
 using ICSharpCode.NRefactory.TypeSystem;
 using ICSharpCode.SharpDevelop;
 using ICSharpCode.SharpDevelop.Parser;
@@ -128,32 +128,38 @@ namespace ICSharpCode.ILSpyAddIn
 			{
 				return Resolve(new DomAssemblyName(fullName), parameters);
 			}
-		}
+
+            public void Dispose()
+            {
+                
+            }
+        }
 		
 		public static ILSpyFullParseInformation DecompileType(DecompiledTypeReference name, CancellationToken cancellationToken = default(CancellationToken))
 		{
-			if (name == null)
-				throw new ArgumentNullException("name");
-			using (DebugTimer.Time("DecompileType: " + name.ToFileName())) {
-				var astBuilder = CreateAstBuilder(name, cancellationToken);
-				return new ILSpyFullParseInformation(ILSpyUnresolvedFile.Create(name, astBuilder), null, astBuilder.SyntaxTree);
-			}
+			//if (name == null)
+			//	throw new ArgumentNullException("name");
+			//using (DebugTimer.Time("DecompileType: " + name.ToFileName())) {
+			//	var astBuilder = CreateAstBuilder(name, cancellationToken);
+			//	return new ILSpyFullParseInformation(ILSpyUnresolvedFile.Create(name, astBuilder), null, astBuilder.SyntaxTree);
+			//}
+			return null;
 		}
 		
-		static AstBuilder CreateAstBuilder(DecompiledTypeReference name, CancellationToken cancellationToken = default(CancellationToken))
-		{
-			ModuleDefinition module = GetModuleDefinitionFromCache(name.AssemblyFile);
-			if (module == null)
-				throw new InvalidOperationException("Could not find assembly file");
-			TypeDefinition typeDefinition = module.GetType(name.Type.ReflectionName);
-			if (typeDefinition == null)
-				throw new InvalidOperationException("Could not find type");
-			DecompilerContext context = new DecompilerContext(module);
-			context.CancellationToken = cancellationToken;
-			AstBuilder astBuilder = new AstBuilder(context);
-			astBuilder.AddType(typeDefinition);
-			return astBuilder;
-		}
+		//static AstBuilder CreateAstBuilder(DecompiledTypeReference name, CancellationToken cancellationToken = default(CancellationToken))
+		//{
+		//	ModuleDefinition module = GetModuleDefinitionFromCache(name.AssemblyFile);
+		//	if (module == null)
+		//		throw new InvalidOperationException("Could not find assembly file");
+		//	TypeDefinition typeDefinition = module.GetType(name.Type.ReflectionName);
+		//	if (typeDefinition == null)
+		//		throw new InvalidOperationException("Could not find type");
+		//	DecompilerContext context = new DecompilerContext(module);
+		//	context.CancellationToken = cancellationToken;
+		//	AstBuilder astBuilder = new AstBuilder(context);
+		//	astBuilder.AddType(typeDefinition);
+		//	return astBuilder;
+		//}
 	}
 	
 	public class DecompiledTypeReference : IEquatable<DecompiledTypeReference>

@@ -183,6 +183,11 @@ namespace ICSharpCode.SharpDevelop.Parser
 		// used to prevent Cecil from loading referenced assemblies
 		sealed class DummyAssemblyResolver : IAssemblyResolver
 		{
+			public void Dispose()
+			{
+				
+			}
+
 			public AssemblyDefinition Resolve(AssemblyNameReference name)
 			{
 				return null;

@@ -129,6 +129,11 @@ namespace Debugger
 		// used to prevent Cecil from loading referenced assemblies
 		sealed class DummyAssemblyResolver : Mono.Cecil.IAssemblyResolver
 		{
+			public void Dispose()
+			{
+				
+			}
+
 			public Mono.Cecil.AssemblyDefinition Resolve(Mono.Cecil.AssemblyNameReference name)
 			{
 				return null;
