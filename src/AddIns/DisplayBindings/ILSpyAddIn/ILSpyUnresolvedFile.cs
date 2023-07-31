@@ -36,28 +36,27 @@ namespace ICSharpCode.ILSpyAddIn
 	{
 		DecompiledTypeReference name;
 		string output;
-		
-		//public static ILSpyUnresolvedFile Create(DecompiledTypeReference name, AstBuilder builder)
-		//{
-		//	var writer = new StringWriter();
-		//	var target = new TextWriterTokenWriter(writer) { IndentationString = "\t" };
-		//	var output = new DebugInfoTokenWriterDecorator(TokenWriter.WrapInWriterThatSetsLocationsInAST(target));
-		//	builder.RunTransformations();
-		//	var syntaxTree = builder.SyntaxTree;
-			
-		//	syntaxTree.AcceptVisitor(new InsertParenthesesVisitor { InsertParenthesesForReadability = true });
-		//	syntaxTree.AcceptVisitor(new CSharpOutputVisitor(output, FormattingOptionsFactory.CreateSharpDevelop()));
-		//	ILSpyUnresolvedFile file = new ILSpyUnresolvedFile(name);
-		//	var v = new TypeSystemConvertVisitor(file);
-		//	syntaxTree.AcceptVisitor(v);
-	
-		//	file.MemberLocations = output.MemberLocations;
-		//	//file.DebugSymbols = output.DebugSymbols;
-		//	file.output = writer.ToString();
-			
-		//	return file;
-		//}
-		
+
+		public static ILSpyUnresolvedFile Create(DecompiledTypeReference name, SyntaxTree syntaxTree)
+		{
+			var writer = new StringWriter();
+			var target = new TextWriterTokenWriter(writer) { IndentationString = "\t" };
+			var output = new DebugInfoTokenWriterDecorator(TokenWriter.WrapInWriterThatSetsLocationsInAST(target));			
+
+			syntaxTree.AcceptVisitor(new InsertParenthesesVisitor { InsertParenthesesForReadability = true });
+			//syntaxTree.AcceptVisitor(new CSharpOutputVisitor(output, FormattingOptionsFactory.CreateSharpDevelop()));
+			ILSpyUnresolvedFile file = new ILSpyUnresolvedFile(name);
+			var v = new TypeSystemConvertVisitor(file);
+			syntaxTree.AcceptVisitor(v);
+
+			file.MemberLocations = output.MemberLocations;
+			//file.DebugSymbols = output.DebugSymbols;
+			writer.Write(syntaxTree.ToString());
+			file.output = writer.ToString();
+
+			return file;
+		}
+
 		ILSpyUnresolvedFile(DecompiledTypeReference name)
 		{
 			this.name = name;

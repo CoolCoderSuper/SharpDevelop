@@ -25,6 +25,8 @@ using System.Threading;
 using System.Threading.Tasks;
 
 using ICSharpCode.Core;
+using ICSharpCode.Decompiler.CSharp;
+using ICSharpCode.NRefactory.CSharp;
 //using ICSharpCode.Decompiler;
 //using ICSharpCode.Decompiler.Ast;
 using ICSharpCode.NRefactory.TypeSystem;
@@ -137,13 +139,17 @@ namespace ICSharpCode.ILSpyAddIn
 		
 		public static ILSpyFullParseInformation DecompileType(DecompiledTypeReference name, CancellationToken cancellationToken = default(CancellationToken))
 		{
-			//if (name == null)
-			//	throw new ArgumentNullException("name");
+			if (name == null)
+				throw new ArgumentNullException("name");
 			//using (DebugTimer.Time("DecompileType: " + name.ToFileName())) {
 			//	var astBuilder = CreateAstBuilder(name, cancellationToken);
 			//	return new ILSpyFullParseInformation(ILSpyUnresolvedFile.Create(name, astBuilder), null, astBuilder.SyntaxTree);
 			//}
-			return null;
+			ModuleDefinition module = GetModuleDefinitionFromCache(name.AssemblyFile);			
+			var decompiler = new CSharpDecompiler(module.FileName, new Decompiler.DecompilerSettings());
+			var results = decompiler.DecompileType(new Decompiler.TypeSystem.FullTypeName(new Decompiler.TypeSystem.TopLevelTypeName(name.Type.Namespace, name.Type.Name, name.Type.TypeParameterCount)));
+			var tree = SyntaxTree.Parse(results.ToString());
+			return new ILSpyFullParseInformation(ILSpyUnresolvedFile.Create(name, tree), null, tree);			
 		}
 		
 		//static AstBuilder CreateAstBuilder(DecompiledTypeReference name, CancellationToken cancellationToken = default(CancellationToken))
